@@ -1,0 +1,273 @@
+<ion-content class="background-body2" *ngIf="TITULO">
+  <ion-buttons left>
+    <button ion-button icon-only (keyup)="bvoltar($event)" (click)="voltar()" style="background-color: transparent">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <div style=" position: absolute !important; z-index: 2; ">
+
+    <br>
+
+    <div style="" class="esconder-capa2">
+
+      <a><img *ngIf="CAPA" src="http://clipart-library.com/images/6Tp5aga7c.png" width="100px" class="play-mobile">
+        <img *ngIf="CAPA" [src]="CAPA" width="100%" style="object-fit: cover; height: 200px"></a>
+
+      <h1 style="font-size: 40px; margin-left: 10px"><b>{{TITULO}}</b></h1>
+
+
+
+      <div *ngIf="NOTA <= 2">
+        <ion-icon name="star" style="color: #ffff00" style="margin-left: 10px"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+      </div>
+
+      <div *ngIf="NOTA >= 3 && NOTA < 6" style="margin-left: 10px">
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+      </div>
+
+      <div *ngIf="NOTA >= 6 && NOTA < 8" style="margin-left: 10px">
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="ios-star-outline"></ion-icon>
+      </div>
+
+      <div *ngIf="NOTA >= 8" style="margin-left: 10px">
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+        <ion-icon name="star" style="color: #ffff00"></ion-icon>
+      </div>
+
+
+
+
+
+      <p style="margin-left: 10px"> {{SINOPSE}}</p>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+
+
+        <ion-col col-md-2 col-lg-2 col-xl-2 col-sm-12 col-12 style="text-align: right">
+          <ion-row class="text-detalhes">
+            <ion-col col-12>
+              <ion-row>
+
+
+                <ion-col col-12>
+                  <div *ngIf="NOTA <= 2" class="esconder-capa">
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                  </div>
+
+                  <div *ngIf="NOTA >= 3 && NOTA < 6" class="esconder-capa">
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                  </div>
+
+                  <div *ngIf="NOTA >= 6 && NOTA < 8" class="esconder-capa">
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="ios-star-outline"></ion-icon>
+                  </div>
+
+                  <div *ngIf="NOTA >= 8" class="esconder-capa">
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                    <ion-icon name="star" style="color: #ffff00"></ion-icon>
+                  </div>
+
+
+
+                </ion-col>
+
+
+
+                <br>
+                <ion-col col-12 class="esconder-capa">
+                  <b>Nota: </b> {{NOTA}}
+                </ion-col>
+
+
+                <ion-col col-md-12 col-lg-12 col-xl-12 col-sm-12 col-12>
+                  <b>Idioma: </b> {{IDIOMA}}
+                </ion-col>
+
+                <ion-col col-12>
+                  <b>Classificação: </b> {{NOTA}}
+                </ion-col>
+
+                <ion-col col-12>
+                  <b>Lançamento: </b> {{LANCAMENTO}}
+                </ion-col>
+
+                <ion-col col-12>
+                  <b>Diretor: </b> {{DIRETOR}}
+                </ion-col>
+
+                <ion-col col-12>
+                  <b>Gênero: </b> {{GENERO}}
+                </ion-col>
+
+                <ion-col col-12>
+                  <b>Lançamento: </b> {{LANCAMENTO}}
+                </ion-col>
+              </ion-row>
+
+
+              <br>
+              <button *ngIf="FAVORITO == '0'" ion-button class="botao-star" [disabled]="buttonDisabled"
+                (keyup)="Adfavorito($event)" style="width: 100%" (click)="addFavoritos()">
+                <ion-icon name="star" style="font-size: 30px"></ion-icon>
+                <p>&nbsp;&nbsp;Add aos favoritos</p>
+              </button>
+
+              <button *ngIf="FAVORITO == '1'" ion-button class="botao-star-ativo" [disabled]="buttonDisabled2"
+                (keyup)="rmfavorito($event)" style="width: 100%" (click)="RFavoritos()">
+                <ion-icon name="star" style="font-size: 30px"></ion-icon>
+                <p>&nbsp;&nbsp;Remover dos favoritos</p>
+              </button>
+              <br>
+              <button ion-button *ngIf="TRAILER" class="botao-play" (keyup)="onKeyTrailer($event, TRAILER)"
+                (click)="varTrailer(TRAILER)" style="width: 100%">
+                <ion-icon name="logo-youtube" style="font-size: 30px"></ion-icon>
+                <p>&nbsp;&nbsp;Trailer</p>
+              </button>
+
+
+
+            </ion-col>
+
+
+
+          </ion-row>
+
+
+        </ion-col>
+
+
+        <ion-col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12>
+          <ion-row>
+
+
+
+            <ion-col col-12 class="esconder-capa">
+              <h1 style="font-size: 40px"><b>{{TITULO}}</b></h1>
+            </ion-col>
+
+            <ion-col col-12 class="esconder-capa">
+
+              <b>Sinopse: </b> {{SINOPSE}}
+
+
+            </ion-col>
+
+
+          </ion-row>
+          <ion-col col-12>
+            <div class="esconder-capa">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <br>
+              <br>
+            </div>
+            <br>
+            <h3>Temporadas:</h3>
+            <button ion-button color="light" *ngFor="let l of listaTemp" (keyup)="onKey($event,l.ID_STMP, l.TEMPORADA)"
+              (click)="varTemporada(l.ID_STMP, l.TEMPORADA)" class="botao-play">Temporada {{l.TEMPORADA}}</button>
+
+
+
+
+
+
+          </ion-col>
+
+
+        </ion-col>
+
+        <ion-col col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12 style="padding-right: 20px" class="esconder-capa">
+          <img *ngIf="CAPA" [src]="CAPA" width="100%">
+        </ion-col>
+
+
+      </ion-row>
+    </ion-grid>
+
+    <div padding>
+      <div style="width: 100%; height: 50px"></div>
+
+
+
+
+      &nbsp;&nbsp;&nbsp; <h1 style="color: #fff">Séries relacionadas</h1>
+      <div style="width: 100%"></div>
+      <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+        <button ion-button *ngFor="let l of RELACIONADOS" class="caixa-capa-home" style="width: 240px; height: 355px "
+          (keyup)="onKeySerie($event,l.ID_SERIE)" (click)="varSerie(l.ID_SERIE)">
+          <div class="estrela-capa-home">
+            <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+          </div>
+          <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+          <span class="fundo-capa"></span>
+          <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+        </button>
+
+
+      </ion-scroll>
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+  <div class="background-filme">
+    <img [src]="sanitizer.bypassSecurityTrustResourceUrl(FUNDO)" class="capacss">
+  </div>
+
+
+
+
+
+
+
+</ion-content>

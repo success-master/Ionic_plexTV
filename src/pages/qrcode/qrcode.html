@@ -1,0 +1,60 @@
+
+<ion-content padding class="background-body">
+  <button ion-button  menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff" ></ion-icon>
+  </button>
+
+  <ion-grid>
+      <ion-row>
+
+
+
+              <ion-col col-2 class="esconder-menu" >
+
+                  <ion-list style="border-color: transparent !important;">
+
+
+
+
+                    <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu2" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                      <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                      <br>
+
+                    {{p.title}}
+                      </button>
+
+                    </ion-list>
+                </ion-col>
+
+                <ion-col col-12 col-md-10 col-lg-10 col-xl-10 >
+
+                  <ion-row>
+
+                      <ion-col col-12 col-md-12  text-center>
+
+  <h2 style="color: #fff">Escaneie o qr code</h2>
+                        <img src="../assets/imgs/qrcode.png" width="450px">
+<br>
+<p>
+  Para instalar no celular você pode escanear o QR CODE<br>ou acessar pelo seu navegador o link bit.ly/xplayp2
+</p>
+                        </ion-col>
+
+
+
+            </ion-row>
+
+
+              </ion-col>
+
+
+
+
+
+
+    </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

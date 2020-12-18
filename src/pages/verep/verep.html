@@ -1,0 +1,55 @@
+
+
+
+
+<ion-content padding class="background-body">
+    <ion-buttons left>
+        <button ion-button icon-only (keyup)="bvoltar($event)" (click)="voltar()" class="voltar" style="background-color: transparent">
+            <ion-icon name="arrow-back"></ion-icon>
+        </button>
+<br>
+<br>
+      </ion-buttons>
+
+
+                  <ion-grid>
+                    <ion-row>
+
+
+
+                      <ion-col col-12 col-md-8>
+<h1 style="font-size: 35px"><b>{{SERIE}}: {{TITULO}} - EP {{EP}}</b></h1>
+<br>
+                                           <b>Sinopse: </b> {{TEXTO}}
+
+
+                      </ion-col>
+
+                      <ion-col col-12 col-md-4 style="text-align: center">
+<br><br><br>
+
+
+  <button ion-button  (keyup)="plai($event,ID, '1')" (click)="play(ID, '1')" class="botao-play">
+    <ion-icon name="play" style="font-size: 30px"></ion-icon>
+    <p>&nbsp;&nbsp;SERVIDOR 1</p>
+  </button>
+
+  <button ion-button  (keyup)="plai($event,ID, '2')" (click)="play(ID, '2')" class="botao-play">
+    <ion-icon name="play" style="font-size: 30px"></ion-icon>
+    <p>&nbsp;&nbsp;SERVIDOR 2</p>
+  </button>
+
+                      </ion-col>
+
+
+                    </ion-row>
+                  </ion-grid>
+
+
+
+
+
+
+
+
+</ion-content>

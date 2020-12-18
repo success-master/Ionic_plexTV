@@ -1,0 +1,61 @@
+page-detalhebreve {
+  .background-filme{
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;height: 100%;  filter: blur(18px);
+   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+ }
+
+ .capacss {
+   width: 100%;
+   object-fit: cover;
+   height: 100%;
+   opacity: 0.5;
+ }
+
+
+
+
+
+ .botao-play{
+ width: 130px;
+ height: auto;
+ font-size: 10px;
+ text-align: center;
+ background-color: transparent;
+ color: #fff;
+ padding: 8px;
+ }
+
+
+ .botao-star{
+   width: 150px;
+   height: auto;
+   font-size: 10px;
+   text-align: center;
+   background-color: transparent;
+   color: #ffe900;
+   padding: 8px;
+   }
+
+
+
+
+
+   .botao-star:focus {
+     border: 3px solid #ffe900 ;
+     box-shadow: 0px 0px 40px #ffe900;
+     background-color: #ffe900;
+     color: #000
+
+     }
+
+     .botao-star:active {
+       border: 3px solid #ffe900 ;
+       box-shadow: 0px 0px 40px #ffe900 ;
+       background-color: #ffe900;
+       color: #000
+
+       }
+
+}

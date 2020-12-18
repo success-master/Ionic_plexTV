@@ -1,0 +1,78 @@
+
+<ion-content padding class="background-body">
+  <button ion-button  menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff" ></ion-icon>
+  </button>
+
+  <ion-grid>
+      <ion-row>
+
+
+
+              <ion-col col-2 class="esconder-menu" >
+
+                  <ion-list style="border-color: transparent !important;">
+
+
+
+                    <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu2" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                      <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                      <br>
+
+                    {{p.title}}
+
+                      </button>
+
+
+                    </ion-list>
+                </ion-col>
+
+                <ion-col col-12 col-md-10 col-lg-10 col-xl-10 >
+                  <h2 style="color: #fff">Escolha uma opção</h2>
+                  <ion-row>
+
+                      <ion-col col-12 col-md-4  >
+                          <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event)" (click)="filmes()">
+
+                           <img src="assets/imgs/filmes.png" style="width: 70% !important">
+
+                          </button>
+
+                        </ion-col>
+
+
+                      <ion-col col-12 col-md-4  >
+                <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKeyS($event)"  (click)="series()">
+
+                 <img src="assets/imgs/tv.png" style="width: 70% !important">
+
+                </button>
+
+              </ion-col>
+
+
+
+              <ion-col col-12 col-md-4  >
+                <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKeyD($event)"  (click)="walt()">
+
+                 <img src="assets/imgs/walt_disney_PNG28.png" style="width: 70% !important">
+
+                </button>
+
+              </ion-col>
+            </ion-row>
+
+
+              </ion-col>
+
+
+
+
+
+
+    </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

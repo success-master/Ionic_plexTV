@@ -1,0 +1,72 @@
+
+<ion-content padding class="fundo-body">
+    <button ion-button  menuToggle class="menu">
+        <ion-icon name="menu" style="color: #fff" ></ion-icon>
+      </button>
+
+
+    <ion-grid>
+        <ion-row>
+
+          <ion-col col-2 class="esconder-menu" >
+              <ion-list  style="border-color: transparent !important;">
+
+
+
+                <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu2" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                    <ion-icon name="{{p.icon}}" style="font-size: 20px; padding: 0px !important"></ion-icon>
+
+                    <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                    <br>
+
+                  {{p.title}}
+
+                  </button>
+
+
+                </ion-list>
+            </ion-col>
+
+
+            <ion-col col-12 col-md-10 col-lg-10 col-xl-10  >
+              <br><br>
+                <h1 style="color: #fff">Pesquisar Filmes</h1>
+                <button  ion-button class="btn-avancar" *ngIf="BOTAO == 1" (click)="atualizar()" (keyup)="atualizar2($event)" style="width: 100%;" >PESQUISAR NOVAMENTE</button>
+              <ion-list>
+                <ion-item class="ion-item" *ngIf="BOTAO == 0" >
+
+                  <ion-input type="text" value="" #searchInput placeholder="Digite o titulo do filme" class="ion-input3" [(ngModel)]="buscar" (keyup)="onKey2($event)" style="color: #fff !important;" ></ion-input>
+
+                </ion-item>
+                <!--<span style="font-size: 15px; text-align: right; color: #fff">Aperte para pesquisar</span>-->
+              </ion-list>
+
+              <button *ngIf="BOTAO == 0" ion-button full class="btn-avancar"  id="ctl00_plcPrincipal_btnContrato" (click)="ir()" (keyup)="onKey2($event,b)">
+                  Pesquisar
+                </button>
+<br><br>
+      <ion-row>
+          <ion-col col-lg-2 col-sm-3 col-4 *ngFor="let l of lista">
+              <div *ngIf="l.STATUS == 1">
+                 <div class="estrela-capa"><ion-icon name="ios-star"></ion-icon> {{l.RATING}} </div>
+                      <button ion-button  style="box-shadow: 1px 2px 20px #000; background-color: transparent; padding: 0px; " class="caixa-capa" (keyup)="onKey($event,l.ID_FILM)" (click)="varFilme(l.ID_FILM)">
+                       <img class="img2-capa" [src]="l.CAPA" width="100%"  height="100%">
+                       <span class="fundo-capa"></span>
+                       <p class="titulo-filmes"><b >{{l.TITULO}}</b></p>
+                     </button>
+               </div>
+               <div *ngIf="l.STATUS == 0" style="width: 500px; position: absolute ; color: #fff">
+<h3>Nenhum Filme encontrado!</h3>
+                </div>
+                   </ion-col>
+
+
+
+
+
+      </ion-row>
+    </ion-col>
+
+  </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,60 @@
+
+<ion-content padding class="background-body22">
+
+
+
+
+
+
+
+
+
+
+
+  <div style="height: 60px"></div>
+
+  <div style="max-width: 500px; margin: 0 auto;" >
+    <p style="color: #fff; text-align: center;"  class="font-padrao"><img src="assets/imgs/logow2.png" width="100%" >
+
+    </p>
+  </div>
+
+<div style="max-width: 500px; margin: 0 auto;" >
+
+    <h6 style="color: #fff; text-align: left;">Digite suas informações</h6>
+<!--<button ion-button  (click)="searchInput.setFocus()" style="width: 100%; background-color: #008645">Clique para digitar o usuário</button>
+-->
+    <ion-list>
+      <ion-item class="ion-item" >
+
+        <ion-input type="text"   #searchInput value="" placeholder="Usuário" class="ion-input3" [(ngModel)]="USUARIO" style="color: #fff !important; " (keyup)="onKey($event,b)"></ion-input>
+
+      </ion-item>
+        </ion-list>
+
+    <ion-list>
+
+      <ion-item class="ion-item" style="text-align: right">
+
+          <ion-input type="password" value="" #b placeholder="Senha" class="ion-input3" [(ngModel)]="SENHA" autocomplete="new-password" (keyup)="onKey2($event,searchInput,en)" style="color: #fff !important;"></ion-input>
+
+        </ion-item>
+
+    </ion-list>
+
+    <button ion-button full #en class="btn-avancar botao-play botao-detalhe" id="ctl00_plcPrincipal_btnContrato" (click)="login()">
+      Entrar
+    </button>
+<br>
+    <button ion-button full #en class="btn-avancar botao-play botao-detalhe" id="ctl00_plcPrincipal_btnContrato" (click)="cadastrar()">
+      Cadastre-se
+    </button>
+  </div>
+
+
+
+
+
+
+
+</ion-content>

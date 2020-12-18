@@ -1,0 +1,80 @@
+
+<ion-content padding class="background-body4k">
+  <button ion-button  menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff" ></ion-icon>
+  </button>
+
+  <ion-grid>
+      <ion-row>
+
+
+
+              <ion-col col-2 class="esconder-menu" >
+
+                  <ion-list style="border-color: transparent !important;">
+
+
+
+
+                    <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu2" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                      <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                      <br>
+
+                    {{p.title}}
+                      </button>
+
+                    </ion-list>
+                </ion-col>
+
+                <ion-col col-12 col-md-10 col-lg-10 col-xl-10 >
+
+<div *ngIf="PREMIUM == '1'">
+                  <bR>
+                <h1 style="color: #fff; text-align: center">SELECIONE UMA OPÇÃO</h1>
+ <br>
+                  <ion-row>
+
+                      <ion-col col-12 col-md-6  >
+                          <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event)" (click)="filmes()">
+
+                           <img src="assets/imgs/filmes4k.png" style="width: 70% !important">
+
+                          </button>
+
+                        </ion-col>
+
+
+                      <ion-col col-12 col-md-6  >
+                <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKeyS($event)"  (click)="series()">
+
+                 <img src="assets/imgs/series4k.png" style="width: 70% !important">
+
+                </button>
+
+              </ion-col>
+            </ion-row>
+
+  </div>
+
+
+
+  <div *ngIf="PREMIUM == '0'">
+    <bR>
+      <h1 style="color: #fff; text-align: center">Acesso negado!
+        <br>
+        Entre em contato com o suporte para mais informações.</h1>
+<br>
+
+  </div>
+
+              </ion-col>
+
+
+
+
+    </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

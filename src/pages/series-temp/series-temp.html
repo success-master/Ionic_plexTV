@@ -1,0 +1,48 @@
+
+
+  <ion-content padding class="background-body">
+      <ion-buttons left>
+          <button ion-button icon-only (keyup)="bvoltar($event)" (click)="voltar()" style="background-color: transparent">
+              <ion-icon name="arrow-back"></ion-icon>
+              <!--<b  style="color: #fff">TEMPORADA {{TITULO}} - {{SERIE}}</b>-->
+          </button>
+        </ion-buttons>
+
+
+      <button ion-button class="caixa-capa esconder-capa-ep" *ngFor="let l of lista" (keyup)="onKey($event,l.ID_VD,l.TITULO,l.SINOPSE,l.LINK,l.EP)" (click)="abrir(l.ID_VD,l.TITULO,l.SINOPSE,l.LINK,l.EP)" style=" width: 300px; height: auto;  ">
+
+
+        <ion-card style="background-color: transparent; box-shadow: none; padding: 0px" class="">
+            <img [src]="CAPA"/>
+            <ion-card-content>
+              <ion-card-title style="white-space: normal !important; color: #fff; height: 100px">
+                  EP {{l.EP}} - {{l.TITULO}}
+                </ion-card-title>
+
+            </ion-card-content>
+          </ion-card>
+</button>
+<br>
+          <ion-list style="background-color: transparent;" class="esconder-capa-ep2" *ngFor="let l of lista" (keyup)="onKey($event,l.ID_VD,l.TITULO,l.SINOPSE,l.LINK,l.EP)" (click)="abrir(l.ID_VD,l.TITULO,l.SINOPSE,l.LINK,l.EP)">
+            <ion-item style="background-color: transparent; color: #fff !important; border: 1px solid rgba(0,0,0,0.3)"> 
+              <ion-thumbnail item-start>
+                <img [src]="CAPA">
+              </ion-thumbnail>
+              <h2>EP {{l.EP}}</h2>
+              <p style="color: #fff !important">{{l.TITULO}}</p>
+              <button ion-button clear item-end style="color: #fff !important">Ver</button>
+            </ion-item>
+          </ion-list>
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

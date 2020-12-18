@@ -1,0 +1,25 @@
+<ion-menu [content]="content" id="myMenu">
+
+
+
+  <ion-content style="background-color: #343434; color: #fff">
+
+    <ion-list>
+      <button id="menu" menuClose ion-item no-lines *ngFor="let p of pages" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+        <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+        <br>
+
+      {{p.title}}
+
+      </button>
+
+      <!--<button menuClose ion-item *ngFor="let p of CATEGORIA" (click)="openPage2(p.ID_CAT, p.NOME)" style="background-color: #343434; color: #fff">
+        {{p.NOME}}
+      </button>-->
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

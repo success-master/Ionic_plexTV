@@ -1,0 +1,439 @@
+@media only screen and (min-width: 767px) {
+    .esconder-capa-ep2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .esconder-menu {
+        display: none;
+    }
+    .esconder-capa {
+        display: none;
+    }
+    .menu {
+        width: 60px;
+        font-size: 23px;
+        background-color: transparent
+    }
+    .text-detalhes {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .esconder-capa2 {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+
+.ion-item {
+    background-color: #343434;
+    border-bottom: 1px solid transparent !important;
+    border-radius: 5px;
+}
+
+.fundo-body {
+    //background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    background-color: #141414;
+    //background-image: url('../assets/imgs/fundo-novo.jpeg')
+}
+
+.toolbar-background {
+    background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    color: #fff;
+}
+
+.prazo {
+    position: absolute;
+    z-index: 999999999;
+    color: #008645;
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.prazo1 {
+    position: absolute;
+    z-index: 999999999;
+    color: #008645;
+    text-align: right;
+    width: 650px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.background-body {
+    //background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    background-color: #141414;
+    color: #fff;
+    font-size: 22px;
+}
+
+.background-body4k {
+    //background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    background-image: url('../assets/imgs/829215.jpg');
+    background-size: cover;
+    color: #fff;
+    font-size: 22px;
+}
+
+.background-body22 {
+    //background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    background-image: url('../assets/imgs/fundo-net.jpg');
+    background-size: cover;
+    color: #fff;
+    font-size: 22px;
+}
+
+.background-body_cadastro {
+    //background-image: linear-gradient(to right, #282A2C, #7C7F68, #282A2C);
+    background-image: url('../assets/imgs/fundo2.jpg');
+    background-size: cover;
+    color: #fff;
+    font-size: 22px;
+}
+
+.background-body2 {
+    background-color: #000;
+    color: #fff;
+    font-size: 22px;
+}
+
+.back-button-icon-md {
+    color: #000;
+}
+
+.titulo-filmes {
+    white-space: normal !important;
+    position: absolute;
+    margin-top: 60%;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.fundo-capa {
+    position: absolute;
+    margin-top: 120%;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-filmes-ep {
+    white-space: normal !important;
+    position: absolute;
+    margin-top: 55%;
+}
+
+.fundo-capa-ep {
+    position: absolute;
+    margin-top: 110%;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-capa-img:active {
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+}
+
+.caixa-capa-img:focus {
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+}
+
+.play-mobile {
+    position: absolute;
+    margin-left: 36%;
+    margin-top: 40px;
+}
+
+.caixa-capa {
+    background-color: transparent;
+    padding: 0px;
+    // box-shadow: 1px 2px 20px #000;
+    background-color: transparent;
+    padding: 0px;
+    width: 100%
+}
+
+.caixa-capa-home {
+    background-color: transparent;
+    padding: 0px;
+    // box-shadow: 1px 2px 20px #000;
+    background-color: transparent;
+    padding: 0px;
+    width: 100%
+}
+
+@media only screen and (min-width: 2301px) {
+    .caixa-capa {
+        height: 410px;
+    }
+    .caixa-capa-home {
+        height: 410px;
+    }
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 2300px) {
+    .caixa-capa {
+        height: 380px;
+    }
+    .caixa-capa-home {
+        height: 380px;
+    }
+}
+
+@media only screen and (min-width: 1333px) and (max-width: 1799px) {
+    .caixa-capa {
+        height: 300px;
+    }
+    .caixa-capa-home {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1332px) {
+    .caixa-capa {
+        height: 250px;
+    }
+    .caixa-capa-home {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .caixa-capa {
+        height: 100%;
+    }
+    .caixa-capa-home {
+        height: 100%;
+    }
+}
+
+//PARA CELULAR
+@media only screen and (max-width: 600px) {
+    .caixa-capa {
+        // width: 100px !important;
+        // height: 150px !important;
+    }
+    .caixa-capa-home {
+        width: 100px !important;
+        height: 150px !important;
+    }
+    .caixa-scrol {
+        height: 210px !important;
+    }
+    .fundo-body {
+        padding: 0px !important;
+    }
+    h1 {
+        font-size: 19px !important;
+    }
+    .titulo-filmes {
+        font-size: 9px !important;
+        margin-top: 50%;
+    }
+    .titulo-filmes-ep {
+        font-size: 9px !important;
+        margin-top: 40%;
+    }
+    .fundo-capa-ep {
+        margin-top: 90%;
+    }
+    .fundo-capa {
+        margin-top: 100%;
+    }
+    .caixa-menu {
+        width: 100% !important;
+    }
+    .botao-detalhe {
+        width: 45% !important;
+        background-color: #ff0000;
+    }
+    .esconder-capa-ep {
+        display: none;
+    }
+}
+
+.botao-ver-mais:focus {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ;;
+    background-color: #ff0000;
+}
+
+.botao-ver-mais:active {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+    background-color: #ff0000;
+}
+
+.botao-play:focus {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ;;
+    background-color: #ff0000;
+}
+
+.voltar:active {
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+}
+
+.voltar:focus {
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+}
+
+.botao-play:active {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+    background-color: #ff0000;
+}
+
+.caixa-capa:focus {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ;;
+    background-color: #ff0000;
+}
+
+.caixa-capa-home:focus {
+    border: 3px solid #ff0000;
+    ////box-shadow: 0px 0px 40px #ff0000 ;;
+    background-color: #ff0000;
+}
+
+.img2-capa {
+    animation: fadeIn 500ms linear;
+}
+
+.img2-capa:hover {}
+
+.caixa-capa:active {
+    border: 3px solid #ff0000;
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+    background-color: #ff0000;
+}
+
+.caixa-capa-home:active {
+    border: 3px solid #ff0000;
+    ////box-shadow: 0px 0px 40px #ff0000 ; ;
+    background-color: #ff0000;
+}
+
+.caixa-cat:active {
+    // box-shadow: 0px 0px 20px #ff0000 ;
+}
+
+.caixa-cat:focus {
+    //box-shadow: 0px 0px 40px #ff0000 ; ;
+    background-color: #ff0000;
+}
+
+.botao-menu:active {
+    color: #ff0000 !important;
+}
+
+.botao-menu:focus {
+    color: #ff0000 !important;
+}
+
+.texto-menu:active {
+    color: #ff0000 !important;
+}
+
+.texto-menu:focus {
+    color: #ff0000 !important;
+}
+
+.DivCat {
+    width: 100%;
+    background-color: #FFF;
+    line-height: 80px;
+    font-size: 18px;
+    color: #000;
+    float: left;
+    text-align: center
+}
+
+.DivCat:hover {
+    width: 100%;
+    background-color: #fff;
+}
+
+.botao-menu {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: #000;
+    height: 140px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.estrela-capa {
+    position: absolute;
+    color: #ffe500;
+    z-index: 999;
+    margin-top: 8px;
+    font-size: 20px;
+    text-shadow: 2px 1px 0px #000;
+    text-align: right;
+    width: 100%;
+    padding-right: 15px
+}
+
+.estrela-capa-home {
+    position: absolute;
+    color: #ffe500;
+    z-index: 999;
+    margin-top: -68%;
+    font-size: 20px;
+    text-shadow: 2px 1px 0px #000;
+    text-align: right;
+    width: 100%;
+    padding-right: 15px
+}
+
+.botao-star-ativo {
+    width: 180px;
+    height: auto;
+    font-size: 10px;
+    text-align: center;
+    background-color: #ffe900;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+}
+
+.botao-star-ativo:focus {
+    border: 3px solid #ffe900;
+    //box-shadow: 0px 0px 40px #ffe900;
+    background-color: transparent;
+    color: #ffe900
+}
+
+.botao-star-ativo:active {
+    border: 3px solid #ffe900;
+    //  box-shadow: 0px 0px 40px #ffe900 ;
+    background-color: transparent;
+    color: #ffe900
+}

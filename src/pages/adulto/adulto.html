@@ -1,0 +1,54 @@
+
+<ion-content padding class="background-body">
+  <button ion-button  menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff" ></ion-icon>
+  </button>
+
+  <ion-grid>
+      <ion-row>
+
+
+
+              <ion-col col-2 class="esconder-menu" >
+
+                  <ion-list style="border-color: transparent !important;">
+
+
+
+
+              <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu2" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                  <br>
+
+                {{p.title}}
+              </button>
+
+
+
+                    </ion-list>
+                </ion-col>
+
+                <ion-col col-12 col-md-10 col-lg-10 col-xl-10 >
+                  <h2 style="color: #fff">Digite o PIN para acessar</h2>
+
+
+                    <ion-item class="ion-item" >
+
+                      <ion-input type="number"   #searchInput max="4" placeholder="Digite o PIN de 4 digitos" class="ion-input3" (keyup)="contar($event, '1')" value="{{teste}}" [(ngModel)]="PIN2" style="color: #fff !important;" ></ion-input>
+
+                    </ion-item>
+                    <button ion-button class="btn-avancar" (click)="ir()" (keyup)="ir2($event)"  style="width: 100%;" >ENTRAR</button>
+
+
+
+              </ion-col>
+
+
+
+
+    </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

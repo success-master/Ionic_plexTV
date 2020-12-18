@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color: #343434; color: #fff">
+
+   <ion-list style="border: none;">
+     <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"  style="background-color: #343434; color: #fff; font-size: 30px; border-bottom: 1px solid #fff" class="botao-menu texto-menu">
+       <ion-icon name="{{p.icon}}"></ion-icon>
+       &nbsp;&nbsp;
+
+     {{p.title}}
+
+     </button>
+
+   </ion-list>
+ </ion-content>

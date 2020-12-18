@@ -1,0 +1,376 @@
+<ion-content class="fundo-body">
+
+  <div class="letreiro" *ngIf="LETREIRO_STATUS == '1'">
+    <marquee><b class="titulo-letreiro">{{LETREIRO}}</b></marquee>
+  </div>
+  <button ion-button menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff"></ion-icon>
+  </button>
+
+
+
+
+  <div class="prazo1">
+    <button ion-button #searchInput color="light" class="botao-inicial" (keyup)="onKeyPesquisar($event)"
+      (click)="pesquisarPage()" style="width: 250px">Pesquisar</button>
+  </div>
+
+  <div class="prazo">
+    Você tem: <b>{{PRAZO}}</b> Dias
+  </div>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-2 class="esconder-menu">
+        <ion-list style="border-color: transparent !important;  padding: 0px !important">
+
+
+
+          <!--<img src="assets/imgs/lite.png">-->
+
+
+
+          <!-- <button id="menu" menuClose ion-item no-lines *ngFor="let p of pages" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                  <ion-icon name="{{p.icon}}" style="font-size: 20px; padding: 0px !important"></ion-icon>
+
+                  &nbsp;
+               <span style="font-size: 20px;">{{p.title}}</span>
+
+                </button>-->
+
+
+          <button id="menu" menuClose ion-item no-lines *ngFor="let p of pages" (keyup)="onKeyMENU($event,p)"
+            (click)="openPage(p)" autofocus style="background-color: transparent; color: #fff; font-size: 15px;"
+            class="botao-menu texto-menu">
+            <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+            <br>
+
+            {{p.title}}
+
+          </button>
+
+
+
+        </ion-list>
+      </ion-col>
+
+      <ion-col col-12 col-md-10 col-lg-10 col-xl-10 style="height: 100px">
+
+        <div class="banner-inicial" *ngFor="let b of BANNER" [style.backgroundImage]="'url(' + b.IMAGEM + ')'">
+
+          <div class="banner-inicial-interno">
+            <h1 class="titulo-inicial"> {{b.TITULO}} <BR> <span style="font-size: 20px;">Nota: <ion-icon
+                  name="ios-star"></ion-icon> {{b.NOTA}}</span> </h1>
+
+            <p class="texto-inicial"> {{b.DESCRICAO}} </p>
+            <button ion-button color="light" class="botao-inicial" (keyup)="onKeyBANNER($event,b.ID,b.TIPO)"
+              (click)="verbanner(b.ID,b.TIPO)">Assitir</button>
+          </div>
+
+        </div>
+
+
+
+        <div style="width: 100%; height: 10px"></div>
+
+
+
+        <h1 style="color: #fff">Últimos filmes adicionados</h1>
+        <div style="width: 100%"></div>
+
+
+
+
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of lista" class="caixa-capa-home" style="width: 240px; height: 355px ; "
+            (keyup)="onKey($event,l.ID_FILM)" (click)="varFilme(l.ID_FILM)">
+
+            <div class="estrela-capa-home">
+              <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+            </div>
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+
+            <span class="fundo-capa"></span>
+            <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+
+
+          </button>
+
+
+        </ion-scroll>
+
+
+
+
+
+        <div style="width: 100%; height: 10px"></div>
+
+
+
+        <h1 style="color: #fff">Filmes mais assistidos</h1>
+        <div style="width: 100%"></div>
+
+
+
+
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of listaFM" class="caixa-capa-home" style="width: 240px; height: 355px ; "
+            (keyup)="onKey($event,l.ID_FILM)" (click)="varFilme(l.ID_FILM)">
+
+            <div class="estrela-capa-home">
+              <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+            </div>
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+
+            <span class="fundo-capa"></span>
+            <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+
+
+          </button>
+
+
+        </ion-scroll>
+
+
+
+
+
+
+        <div style="width: 100%; height: 10px"></div>
+
+
+
+        <h1 style="color: #fff">{{TITULOS1}}</h1>
+        <div style="width: 100%"></div>
+
+
+
+
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+          <span *ngFor="let l of listaWLT">
+            <button ion-button *ngIf="l.MODO == '0'" class="caixa-capa-home" style="width: 240px; height: 355px ; "
+              (keyup)="onKey($event,l.ID_FILM)" (click)="varFilme(l.ID_FILM)">
+
+              <div class="estrela-capa-home">
+                <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+              </div>
+              <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+
+              <span class="fundo-capa"></span>
+              <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+
+
+            </button>
+
+
+
+            <button ion-button *ngIf="l.MODO == '1'" class="caixa-capa-home" style="width: 240px; height: 355px "
+              (keyup)="onKeySerie($event,l.ID_SERIE)" (click)="varSerie(l.ID_SERIE)">
+              <div class="estrela-capa-home">
+                <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+              </div>
+              <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+              <span class="fundo-capa"></span>
+              <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+            </button>
+
+
+
+          </span>
+
+
+
+
+
+
+
+
+
+        </ion-scroll>
+
+
+
+
+
+        <div style="width: 100%; height: 10px"></div>
+
+
+
+        <h1 style="color: #fff">{{TITULOS2}}</h1>
+        <div style="width: 100%"></div>
+
+
+
+
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of listaACAO" class="caixa-capa-home" style="width: 240px; height: 355px ; "
+            (keyup)="onKey($event,l.ID_FILM)" (click)="varFilme(l.ID_FILM)">
+
+            <div class="estrela-capa-home">
+              <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+            </div>
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+
+            <span class="fundo-capa"></span>
+            <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+
+
+          </button>
+
+
+        </ion-scroll>
+
+
+
+
+
+        <div style="width: 100%; height: 50px"></div>
+
+
+
+
+        <h1 style="color: #fff">Últimas séries adicionadas</h1>
+        <div style="width: 100%"></div>
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of listaS" class="caixa-capa-home" style="width: 240px; height: 355px "
+            (keyup)="onKeySerie($event,l.ID_SERIE)" (click)="varSerie(l.ID_SERIE)">
+            <div class="estrela-capa-home">
+              <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+            </div>
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+            <span class="fundo-capa"></span>
+            <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+          </button>
+
+
+        </ion-scroll>
+
+
+
+        <div style="width: 100%; height: 50px"></div>
+
+
+
+
+        <h1 style="color: #fff">Séries mais assistidas </h1>
+        <div style="width: 100%"></div>
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of listaSM" class="caixa-capa-home" style="width: 240px; height: 355px "
+            (keyup)="onKeySerie($event,l.ID_SERIE)" (click)="varSerie(l.ID_SERIE)">
+            <div class="estrela-capa-home">
+              <ion-icon name="ios-star"></ion-icon> {{l.RATING}}
+            </div>
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+            <span class="fundo-capa"></span>
+            <p class="titulo-filmes"><b>{{l.TITULO}}</b></p>
+
+          </button>
+
+
+        </ion-scroll>
+
+
+
+
+
+
+
+        <div style="width: 100%; height: 50px"></div>
+
+
+
+        <h1 style="color: #fff">Últimos Episódios adicionados</h1>
+        <div style="width: 100%"></div>
+
+
+        <ion-scroll id="teste" scrollX="true" style="white-space: nowrap; height: 410px;" class="caixa-scrol">
+
+
+
+          <button ion-button *ngFor="let l of listaEP" class="caixa-capa-home"
+            style="width: 240px; height: 355px ; background-color: #000; "
+            (keyup)="onKeyEp($event,l.ID_SERIE, l.TITULO, l.SINOPSE, l.LINK, l.EP, l.SERIE)"
+            (click)="abrirEp(l.ID_SERIE, l.TITULO, l.SINOPSE, l.LINK, l.EP, l.SERIE)">
+
+            <img class="img2-capa" [src]="l.CAPA" width="100%" height="100%">
+            <span class="fundo-capa-ep"></span>
+            <p class="titulo-filmes-ep"><b>
+                {{l.SERIE}}
+                <br><br>
+                Temp {{l.TEMP}} EP {{l.EP}}: {{l.TITULO}}
+
+              </b></p>
+          </button>
+
+
+        </ion-scroll>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div style="width: 100%; height: 50px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ion-col>
+
+
+
+
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+</ion-content>

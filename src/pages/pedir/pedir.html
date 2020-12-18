@@ -1,0 +1,51 @@
+
+<ion-content padding class="background-body">
+  <button ion-button  menuToggle class="menu">
+    <ion-icon name="menu" style="color: #fff" ></ion-icon>
+  </button>
+
+  <ion-grid>
+      <ion-row>
+
+
+
+              <ion-col col-2 class="esconder-menu" >
+
+                  <ion-list style="border-color: transparent !important;">
+
+
+
+
+                    <button id="menu" menuClose ion-item no-lines *ngFor="let p of menu" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                      <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                      <br>
+
+                    {{p.title}}
+
+                      </button>
+
+                    </ion-list>
+                </ion-col>
+
+                <ion-col col-12 col-md-10 col-lg-10 col-xl-10 >
+                  <h2 style="color: #fff">Digite o filme que deseja </h2>
+
+                  <ion-item class="ion-item" >
+
+                      <ion-input type="text"   #searchInput m placeholder="Digite aqui" class="ion-input3" [(ngModel)]="TITULO" style="color: #fff !important;" (keyup)="onKey($event, '1')"></ion-input>
+
+                    </ion-item>
+                    <button ion-button class="btn-avancar" (keyup)="onKey($event, '1')" (click)="enviar()"  style="width: 100%;" >ENVIAR</button>
+
+
+              </ion-col>
+
+
+
+
+    </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

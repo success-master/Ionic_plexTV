@@ -1,0 +1,33 @@
+
+<ion-content padding class="background-body">
+
+
+    <ion-grid>
+        <ion-row>
+
+
+
+
+
+                  <ion-col col-12 col-md-12 col-lg-12 col-xl-12 class="div-ion">
+                    <h2 style="color: #fff">Digite o código para renovar sua assinatura </h2>
+
+                    <ion-item class="ion-item" >
+
+                        <ion-input type="text"   #searchInput m placeholder="Digite aqui" class="ion-input3" [(ngModel)]="TITULO" style="color: #fff !important;" (keyup)="onKey($event, '1')"></ion-input>
+
+                      </ion-item>
+                      <button ion-button class="btn-avancar botao-play botao-detalhe" (keyup)="onKey($event, '1')" (click)="enviar()"  style="width: 100%;" >RENOVAR</button>
+
+
+                </ion-col>
+
+
+
+
+      </ion-row>
+      </ion-grid>
+
+
+
+  </ion-content>

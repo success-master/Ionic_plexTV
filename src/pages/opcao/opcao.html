@@ -1,0 +1,124 @@
+<ion-content padding class="fundo-body">
+    <button ion-button  menuToggle class="menu">
+        <ion-icon name="menu" style="color: #fff" ></ion-icon>
+      </button>
+
+
+  <ion-grid>
+      <ion-row>
+
+        <ion-col col-2 class="esconder-menu">
+            <ion-list style="border-color: transparent !important;  padding: 0px !important">
+
+
+
+
+
+
+
+
+
+
+              <button id="menu" menuClose ion-item no-lines *ngFor="let p of pages" (keyup)="onKeyMENU($event,p)" (click)="openPage(p)" autofocus  style="background-color: transparent; color: #fff; font-size: 15px;"  class="botao-menu texto-menu">
+                <ion-icon name="{{p.icon}}" style="font-size: 90px; padding: 0px !important"></ion-icon>
+                <br>
+
+              {{p.title}}
+
+                </button>
+
+
+
+
+              </ion-list>
+          </ion-col>
+
+    <ion-col col-12 col-md-10 col-lg-10 col-xl-10  style="height: 100px">
+
+
+
+
+
+  <div style="width: 100%; height: 10px"></div>
+
+
+  <h3 style="color: #fff">Player configurado: <B>{{PLAYER}}</B></h3>
+  <div style="width: 100%; "></div>
+              <h1 style="color: #fff">Escolha outro player desejado</h1>
+            <div style="width: 100%"></div>
+
+
+            <ion-row>
+
+
+              <ion-col col-12 col-md-4 col-lg-4 col-xl-4  >
+                <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event, '7')" (click)="SavePlay('7')" >
+
+                 <img src="assets/imgs/NightVideoPlayer.png" style="width: 70% !important">
+
+                </button>
+                <button  class="caixa-baixar" ion-button full (keyup)="onKey($event, 'com.rz.night.player')" (click)="SavePlay('com.rz.night.player')">Baixar MX Player</button>
+              </ion-col>
+
+              <ion-col col-12 col-md-4 col-lg-4 col-xl-4  >
+                  <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event, '1')" (click)="SavePlay('1')" >
+
+                   <img src="assets/imgs/mxp.png" style="width: 70% !important">
+
+                  </button>
+                  <button  class="caixa-baixar" ion-button full (keyup)="onKey($event, 'com.mxtech.videoplayer.ad')" (click)="SavePlay('com.mxtech.videoplayer.ad')">Baixar MX Player</button>
+                </ion-col>
+
+
+              <ion-col col-12 col-md-4 col-lg-4 col-xl-4  >
+        <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event, '2')"  (click)="SavePlay('2')">
+
+         <img src="assets/imgs/vlc.png" style="width: 70% !important">
+
+        </button>
+        <button ion-button full  class="caixa-baixar" (keyup)="onKey($event, 'org.videolan.vlc')" (click)="SavePlay('org.videolan.vlc')">Baixar VLC Player</button>
+      </ion-col>
+
+
+
+      <ion-col col-12 col-md-4 col-lg-4 col-xl-4  >
+        <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event, '3')"  (click)="SavePlay('3')">
+
+         <img src="assets/imgs/android.png" style="width: 70% !important">
+
+        </button>
+
+      </ion-col>
+
+
+    <ion-col col-12 col-md-4 col-lg-4 col-xl-4 >
+        <button ion-button  class="caixa-capa" style="width: 100%; padding: 20px" (keyup)="onKey($event, '4')"  (click)="SavePlay('4')">
+
+         <img src="assets/imgs/html5.png" style="width: 70% !important">
+
+        </button>
+
+      </ion-col>
+
+
+
+    </ion-row>
+
+
+
+
+        </ion-col>
+
+
+
+
+
+      </ion-row>
+    </ion-grid>
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "plextv",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
